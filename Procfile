@@ -1,1 +1,1 @@
-web: gunicorn gifitti:app
+web: gunicorn gifiti:app
