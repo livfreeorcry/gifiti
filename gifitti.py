@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello_world():
     imglink=gif("pepe")
     response="""{{
-        "response_type": "in_channel",
-        text:"{0}"
-    }}"""
+    "response_type": "in_channel",
+    text:"{0}"
+}}"""
     return response.format( imglink )
