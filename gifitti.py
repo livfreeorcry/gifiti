@@ -4,6 +4,9 @@ from gif import gif
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def hello_world():
-    return gif("dickbutt")
+    imglink=gif("pepe")
+    response="""{{text="{0}"}}"""
+    return response.format( imglink )
