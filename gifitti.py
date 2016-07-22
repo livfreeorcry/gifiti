@@ -7,9 +7,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    term=request.args.get('text')
+    try:
+        term=request.args.get('text')
+    else:
+        term="pepe"
     imglink=gif(term)
-    response = { "response_type" : "in_channel", "text" : imglink}
+    response = { "response_type" : "in_channel", "attachments" : [ { "text":imglink ] } } 
     if len(imglink) > 5:
         return jsonify(**response)
     else:
