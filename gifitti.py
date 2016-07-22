@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello_world():
     try:
         term=request.args.get('text')
-    else:
+    except:
         term="pepe"
     imglink=gif(term)
     response = { "response_type" : "in_channel", "attachments" : [ { "text":imglink ] } } 
