@@ -12,7 +12,7 @@ def hello_world():
     except:
         term="pepe"
     imglink=gif(term)
-    response = { "response_type" : "in_channel", "attachments" : [ { "text":imglink } ] } 
+    response = { "response_type" : "in_channel", "attachments" : [ { "image_url":imglink } ] } 
     if len(imglink) > 5:
         return jsonify(**response)
     else:
