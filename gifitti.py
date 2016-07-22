@@ -8,5 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     imglink=gif("pepe")
-    response="""{{text:"{0}"}}"""
+    response="""{{
+        "response_type": "in_channel",
+        text:"{0}"
+    }}"""
     return response.format( imglink )
