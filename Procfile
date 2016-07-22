@@ -1,1 +1,1 @@
-web: gunicorn gifitti:app 
+web: flask gifitti.py
