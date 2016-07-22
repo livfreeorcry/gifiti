@@ -14,9 +14,9 @@ def hello_world():
     imglink=gif(term)
     response = { 
     "response_type" : "in_channel",
-    "fallback": "Image search for {0} found {1}".format(term, imglink),
     "attachments" : [
-        { "image_url":imglink }
+        {"fallback": "Image search for pepe found http://i.imgur.com/cZDQXQ3.gif",
+        "image_url":imglink }
         ]
     } 
     if len(imglink) > 5:
