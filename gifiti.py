@@ -15,7 +15,7 @@ def hello_world():
     response = { 
     "response_type" : "in_channel",
     "attachments" : [
-        {"fallback": "Image search for pepe found http://i.imgur.com/cZDQXQ3.gif",
+        {"fallback": "Image search found http://i.imgur.com/cZDQXQ3.gif",
         "image_url":imglink }
         ]
     } 
