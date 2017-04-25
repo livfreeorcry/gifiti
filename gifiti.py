@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    try:
-        term=request.args.get('text')
-    except:
-        term="failure"
-    imglink=gif(term)
+    term=request.args.get('text')
+    if term:
+        imglink=gif(term)
+    else:
+        term=gif("failure")
     response = { 
     "response_type" : "in_channel",
     "attachments" : [
