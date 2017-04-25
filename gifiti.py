@@ -10,7 +10,7 @@ def hello_world():
     try:
         term=request.args.get('text')
     except:
-        term="pepe"
+        term="failure"
     imglink=gif(term)
     response = { 
     "response_type" : "in_channel",
