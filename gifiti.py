@@ -11,7 +11,7 @@ def hello_world():
     if term:
         imglink=gif(term)
     else:
-        term=gif("failure")
+        imglink=gif("failure")
     response = { 
     "response_type" : "in_channel",
     "attachments" : [
