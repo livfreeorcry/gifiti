@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    term=request.args.get('text',methods=['GET','POST'])
+    term=request.args.get('text')
     if term:
         imglink=gif(term)
     else:
